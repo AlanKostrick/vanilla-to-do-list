@@ -1,27 +1,26 @@
-const itemInput = document.querySelector("#item");
-const addItemButton = document.querySelector("#addItem");
-const itemsList = document.querySelector(".collection-items");
-const clearButton = document.querySelector("#clear");
+const itemInput = document.querySelector('#item');
+const addItemButton = document.querySelector('#addItem');
+const itemsList = document.querySelector('.collection-items');
+const clearButton = document.querySelector('#clear');
 
 loadEventListeners();
 
 function loadEventListeners() {
-  addItemButton.addEventListener("click", addItem);
-  clearButton.addEventListener("click", clearItems);
+  addItemButton.addEventListener('click', addItem);
+  clearButton.addEventListener('click', clearItems);
 }
 
 function addItem(event) {
-  if (itemInput.value === "") {
-    alert("please type into the text box!");
+  if (itemInput.value === '') {
+    alert('please type into the text box!');
   }
 
-  const itemLi = document.createElement("li");
-  itemLi.className = "item";
+  const itemLi = document.createElement('li');
+  itemLi.className = 'item';
   itemLi.innerText = itemInput.value;
   itemsList.appendChild(itemLi);
-  count++;
 
-  itemInput.value = "";
+  itemInput.value = '';
 
   event.preventDefault();
 }
